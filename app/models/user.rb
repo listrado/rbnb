@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :armored_cars
   has_many :bookings
+  has_many :armored_cars, through: :bookings
 end
