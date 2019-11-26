@@ -8,6 +8,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def delete
+    @booking = Booking.find(params[:id])
+    @booking.delete
+  end
+
   def create
     @armored_car = Armored_car.find(params[:armored_car_id])
     @booking = Booking.new
