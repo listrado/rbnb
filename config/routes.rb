@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources   :users,        only: %i[show]
   resources   :armored_cars, only: %i[edit update] do
-    resources :bookings,     only: %i[show]
+    resources :bookings,     only: %i[show delete create new]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
