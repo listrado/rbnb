@@ -40,4 +40,10 @@ ArmoredCar.create(model: 'Batmobile',
                   price_cents: 9_000,
                   user_id: 1)
 
+Booking.create(rent_price_cents: '9_000',
+               starts_on: Time.now,
+               ends_on: Time.now + 1,
+               user_id: 2,
+               armored_car_id: 5)
+
 puts 'Seed complete'
