@@ -3,3 +3,5 @@ class ArmoredCar < ApplicationRecord
   # fixing error
   has_many :bookings
 end
+
+# test commentary
