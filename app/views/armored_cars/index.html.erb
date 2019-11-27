@@ -1,28 +1,31 @@
-<h1>Armored Cars</h1>
+  <!-- Inject the grid here -->
+  <div class="cards">
 
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>price_cents</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <!-- Card Wider -->
+    <% @armored_cars.each do |armored_car| %>
+    <div class="hold-card card card-cascade">
+      <!-- Card image -->
+      <div class="view view-cascade overlay">
+        <%= image_tag "banana.jpg", class: "card-img-top" %>
+      </div>
 
-  <tbody>
-    <% @cars.each do |armored_car| %>
-      <tr>
-        <td><%= armored_car.model %></td>
-        <td><%= armored_car.detailes %></td>
-        <td><%= armored_car.price_cents %></td>
-        <td><%= link_to 'Show', armored_car %></td>
-        <td><%= link_to 'Edit', edit_armored_car_path(armored_car) %></td>
-        <td><%= link_to 'Destroy', armored_car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center">
+
+        <!-- Title -->
+        <h4 class="card-title"><strong><%= armored_car.model %></strong></h4>
+        <!-- Subtitle -->
+        <h5 class="blue-text pb-2"><strong><%= armored_car.price_cents %>$</strong></h5>
+        <!-- Text -->
+        <p>
+          <%= link_to armored_car.detailes, armored_car, class: "card-text" %>
+        </p>
+        <!-- Linkedin -->
+        <a class="px-2 fa-lg li-ic">Book<i class="fab fa-linkedin-in"></i></a>
+
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+    <!-- Card Wider -->
 
-<br>
-
-<%= link_to 'New armored_car', new_armored_car_path %>
+  </div>
