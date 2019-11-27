@@ -1,0 +1,28 @@
+<h1>Armored Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>price_cents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @armored_cars.each do |armored_car| %>
+      <tr>
+        <td><%= armored_car.model %></td>
+        <td><%= armored_car.detailes %></td>
+        <td><%= armored_car.price_cents %></td>
+        <td><%= link_to 'Show', armored_car %></td>
+        <td><%= link_to 'Edit', edit_armored_car_path(armored_car) %></td>
+        <td><%= link_to 'Destroy', armored_car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New armored_car', new_armored_car_path %>
