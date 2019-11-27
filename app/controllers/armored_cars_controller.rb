@@ -1,4 +1,13 @@
 class ArmoredCarsController < ApplicationController
+
+  def index
+    @armored_car = ArmoredCar.all
+  end
+
+  def show
+    @armored_car = ArmoredCar.find(params[:id])
+  end
+
   def new
     @user = User.find(current_user.id)
     @armored_car = ArmoredCar.new
@@ -15,13 +24,13 @@ class ArmoredCarsController < ApplicationController
   end
 
   def edit
-    @car = ArmoredCar.find(params[:id])
+    @car = ArmoredCar.find(params[:model])
   end
 
   def update
-    @car = ArmoredCar.find(params[:id])
+    @car = ArmoredCar.find(params[:model])
     @car.update(car_params)
-    redirect_to '/'
+    redirect_to ArmoredCar_path(@car.id)
   end
 
   def destroy
