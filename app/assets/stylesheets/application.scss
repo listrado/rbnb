@@ -11,3 +11,48 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/cards";
+
+
+
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@media(max-width: 1333px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 992px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 576px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-areas: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin: 50px;
+}
+
+.card {
+    display: grid;
+}
