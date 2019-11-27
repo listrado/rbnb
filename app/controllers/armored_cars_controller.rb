@@ -1,11 +1,11 @@
 class ArmoredCarsController < ApplicationController
   def new
-    @user = User.find(params[:user_id])
+    @user = User.find(current_user.id)
     @armored_car = ArmoredCar.new
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = User.find(current_user.id)
     @armored_car = ArmoredCar.new
     @armored_car.user = @user
     @armored_car.save
@@ -29,8 +29,6 @@ class ArmoredCarsController < ApplicationController
     @armored_car.destroy
 
     redirect_to @armored_car.user
-  end
-
   end
 
   private
