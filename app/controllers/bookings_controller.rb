@@ -24,4 +24,15 @@ class BookingsController < ApplicationController
       redirect_to '/'
     end
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:rent_price_cents, :starts_on, :ends_on)
+  end
 end

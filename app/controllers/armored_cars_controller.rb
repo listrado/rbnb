@@ -1,7 +1,7 @@
 class ArmoredCarsController < ApplicationController
 
   def index
-    @armored_car = ArmoredCar.all
+    @armored_cars = ArmoredCar.all
   end
 
   def show
@@ -28,11 +28,11 @@ class ArmoredCarsController < ApplicationController
   end
 
   def edit
-    @car = ArmoredCar.find(params[:model])
+    @car = ArmoredCar.find(params[:id])
   end
 
   def update
-    @car = ArmoredCar.find(params[:model])
+    @car = ArmoredCar.find(params[:id])
     @car.update(car_params)
     redirect_to armored_car_path(@car.id)
   end
