@@ -14,6 +14,10 @@ class ArmoredCarsController < ApplicationController
     redirect_to @user
   end
 
+  def show
+    @car = ArmoredCar.find(params[:id])
+  end
+
   def edit
     @car = ArmoredCar.find(params[:id])
   end
@@ -21,11 +25,11 @@ class ArmoredCarsController < ApplicationController
   def update
     @car = ArmoredCar.find(params[:id])
     @car.update(car_params)
-    redirect_to '/'
+    redirect_to armored_car_path(@car.id)
   end
 
   def destroy
-    @armored_car = Armored_car.find(params[:id])
+    @armored_car = ArmoredCar.find(params[:id])
     @armored_car.destroy
 
     redirect_to @armored_car.user
