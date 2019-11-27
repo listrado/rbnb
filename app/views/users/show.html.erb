@@ -5,3 +5,11 @@
 <p>name: <%= current_user.name %></p>
 
 <p>id: <%= current_user.id %></p>
+
+<% @bookings.each do |bk| %>
+<h4>Booking</h4>
+car model: <%= bk.armored_car.model %><br>
+starts on day: <%= bk.starts_on %><br>
+ends on day: <%= bk.ends_on %><br>
+the total amount to be paid is: <%= bk.rent_price_cents.to_d/100 %>$<br>
+<% end %>
