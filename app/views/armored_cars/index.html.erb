@@ -1,0 +1,31 @@
+  <!-- Inject the grid here -->
+  <div class="cards">
+
+    <!-- Card Wider -->
+    <% @armored_cars.each do |armored_car| %>
+    <div class="hold-card card card-cascade">
+      <!-- Card image -->
+      <div class="view view-cascade overlay">
+        <%= image_tag "banana.jpg", class: "card-img-top" %>
+      </div>
+
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center">
+
+        <!-- Title -->
+        <h4 class="card-title"><strong><%= armored_car.model %></strong></h4>
+        <!-- Subtitle -->
+        <h5 class="blue-text pb-2"><strong><%= armored_car.price_cents %>$</strong></h5>
+        <!-- Text -->
+        <p>
+          <%= link_to armored_car.detailes, armored_car, class: "card-text" %>
+        </p>
+        <!-- Linkedin -->
+        <a class="px-2 fa-lg li-ic">Book<i class="fab fa-linkedin-in"></i></a>
+
+      </div>
+    </div>
+    <% end %>
+    <!-- Card Wider -->
+
+  </div>
