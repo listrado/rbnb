@@ -30,6 +30,10 @@ class BookingsController < ApplicationController
     @booking.destroy
   end
 
+  def index
+    @bookings = Booking.all
+  end
+
   private
 
   def booking_params
