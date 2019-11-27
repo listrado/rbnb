@@ -15,7 +15,7 @@
         <!-- Title -->
         <h4 class="card-title"><strong><%= armored_car.model %></strong></h4>
         <!-- Subtitle -->
-        <h5 class="blue-text pb-2"><strong><%= armored_car.price_cents %>$</strong></h5>
+        <h5 class="blue-text pb-2"><strong><%= armored_car.price_cents.to_d/100 %>$</strong></h5>
         <!-- Text -->
         <p>
           <%= link_to armored_car.detailes, armored_car, class: "card-text" %>
