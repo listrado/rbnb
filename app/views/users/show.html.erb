@@ -5,7 +5,7 @@
     <!--Image-->
     <div class="view overlay z-depth-1-half">
         <% @bookings.each do |bk| %>
-        <h4>Booking</h4>
+        <h4>Booking <%= bk.armored_car.id %></h4>
         car model: <%= bk.armored_car.model %><br>
         starts on day: <%= bk.starts_on %><br>
         ends on day: <%= bk.ends_on %><br>
