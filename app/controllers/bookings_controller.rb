@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @armored_car = Armored_car.find(params[:armored_car_id])
+    @armored_car = ArmoredCar.find(params[:armored_car_id])
     @booking = Booking.new
   end
 
@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @armored_car = Armored_car.find(params[:armored_car_id])
+    @armored_car = ArmoredCar.find(params[:armored_car_id])
     @booking = Booking.new
     @booking.armored_car = @armored_car
 
