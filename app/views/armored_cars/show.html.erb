@@ -1,4 +1,7 @@
-<h1><%= @armored_car.inspect %></h1>
+<h1><%= @car.model %></h1>
+<p>price in cents: <%= @car.price_cents %></p>
+<p>details of the car: <%= @car.detailes %></p>
+<p>owner of the car: <%= @car.user.name %></p>
 
   <%= link_to 'Edit', edit_armored_car_path %>
   <%= link_to 'Back', armored_cars_path %>

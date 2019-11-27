@@ -1,23 +1,23 @@
 class ArmoredCarsController < ApplicationController
 
   def index
-    @armored_cars = ArmoredCar.all
+    @cars = ArmoredCar.all
   end
 
   def show
-    @armored_car = ArmoredCar.find(params[:id])
+    @car = ArmoredCar.find(params[:id])
   end
 
   def new
     @user = User.find(current_user.id)
-    @armored_car = ArmoredCar.new
+    @car = ArmoredCar.new
   end
 
   def create
     @user = User.find(current_user.id)
-    @armored_car = ArmoredCar.new
-    @armored_car.user = @user
-    @armored_car.save
+    @car = ArmoredCar.new(car_params)
+    @car.user = @user
+    @car.save
 
     # redirect_to garden_path(@garden)
     redirect_to @user
@@ -34,14 +34,14 @@ class ArmoredCarsController < ApplicationController
   def update
     @car = ArmoredCar.find(params[:id])
     @car.update(car_params)
-    redirect_to armored_car_path(@car.id)
+    redirect_to car_path(@car.id)
   end
 
   def destroy
-    @armored_car = ArmoredCar.find(params[:id])
-    @armored_car.destroy
+    @car = ArmoredCar.find(params[:id])
+    @car.destroy
 
-    redirect_to @armored_car.user
+    redirect_to @car.user
   end
 
   private
