@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
   def create
     @armored_car = ArmoredCar.find(params[:armored_car_id])
     @booking = Booking.new(booking_params)
+    @booking.rent_price_cents = @armored_car.price_cents
     @booking.user = current_user
     @booking.armored_car = @armored_car
     if @booking.save
@@ -19,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:rent_price_cents, :starts_on, :ends_on)
+    params.require(:booking).permit(:starts_on, :ends_on)
   end
 end

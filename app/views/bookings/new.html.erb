@@ -4,7 +4,6 @@
     <div class="col-sm-6">
       <h1>Booking an armored_car</h1>
       <%= simple_form_for [@armored_car, @booking] do |form| %>
-        <%= form.input :rent_price_cents %>
         <%= form.input :starts_on %>
         <%= form.input :ends_on %>
         <%= form.button :submit, class: "btn-primary" %>
