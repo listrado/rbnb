@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#icon {
+  background-image: image-url("ac.svg");
+  text-shadow: none;
+  font-size: 80px;
+  color: rgb(236, 240, 241);
+  height: 100px;
+  width: 100px;
+  line-height: 108px;
+  border-radius: 0%;
+  text-align: center;
+}
