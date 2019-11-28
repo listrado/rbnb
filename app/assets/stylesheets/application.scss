@@ -22,7 +22,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@media(max-width: 1600px) {
+@media(max-width: 1700px) {
     .cards {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -66,4 +66,21 @@
 .view.overlay.z-depth-1-half {
     margin: 5px;
     padding: 15px;
+}
+
+#icon {
+    font-family: "Raleway", "Helvetica", "sans-serif";
+    font-weight: 700;
+}
+
+.navbar.navbar-expand-sm.navbar-light.navbar-lewagon {
+    background-color: rgb(44, 62, 80);
+    color: rgb(236, 240, 241);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: rgb(236, 240, 241);
+    -webkit-transition: .35s;
+    transition: .35s;
+    font-size: x-large;
 }
