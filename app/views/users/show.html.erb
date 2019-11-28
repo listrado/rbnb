@@ -1,26 +1,41 @@
 <br>
-<h1>PROFILE</h1>
-
-<p>picture</p>
-
-<p>name: <%= current_user.name %></p>
-
-<p>id: <%= current_user.id %></p>
 
 <div class="col-md-12">
-    <p>name: <%= current_user.email %></p>
-    <!--Image-->
-    <div class="view overlay z-depth-1-half">
-<% @bookings.each do |booking| %>
-<h4>Booking</h4>
-car model: <%= booking.armored_car.model %><br>
-starts on day: <%= booking.starts_on %><br>
-ends on day: <%= booking.ends_on %><br>
-Days of rent: <%= booking.days_of_rent %><br>
-the total amount to be paid is: <%= number_to_currency(booking.total_price / 100.0) %><br>
-<%= link_to 'cancel', armored_car_booking_path(booking),method: :delete, data: {confirm: 'are you sure' } %><br>
-        <% end %>
-    </div>
+
+	<p>id: <%= current_user.id %></p>
+
+	<h1>PROFILE</h1>
+
+	<p>picture</p>
+
+	<p>name: <%= current_user.name %></p>
+
+	<p>name: <%= current_user.email %></p>
+
+	<div class="view overlay z-depth-1-half">
+
+		<div class="row">
+
+			<% @bookings.each do |booking| %>
+			<div class="col-md-6">
+		    	<!--Image-->
+				<h4>Booking</h4><br>
+				<p>car model: <%= booking.armored_car.model %></p><br>
+				starts on day: <%= booking.starts_on %>
+				ends on day: <%= booking.ends_on %><br>
+				Days of rent: <%= booking.days_of_rent %><br>
+				the total amount to be paid is: <%= number_to_currency(booking.total_price / 100.0) %><br>
+				<%= link_to 'cancel', armored_car_booking_path(booking),method: :delete, data: {confirm: 'are you sure' } %><br>
+		    </div>
+		    <div class="col-md-6">
+		    	<img
+		        	id="map"
+		        	src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%= booking.armored_car.address %>,16.45,0,0/300x300?access_token=pk.eyJ1IjoibWF2ZXJpY2thbnAiLCJhIjoiY2sycWx1MDdvMGdkdjNoazRvb3d3NTlxaCJ9.3_qqAnqwuqoCNmnhQUm1_Q"
+		      	/><br>
+		    </div>
+		    <% end %>
+		</div>
+	</div>
 </div>
 <br>
 
