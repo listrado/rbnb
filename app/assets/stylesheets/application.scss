@@ -22,6 +22,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@media(max-width: 1600px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media(max-width: 1333px) {
     .cards {
         grid-template-columns: 1fr 1fr 1fr;
@@ -55,4 +61,9 @@
 
 .card {
     display: grid;
+}
+
+.view.overlay.z-depth-1-half {
+    margin: 5px;
+    padding: 15px;
 }
