@@ -54,4 +54,19 @@ Booking.create(rent_price_cents: '9_000_000',
                armored_car_id: 6,
                address: 'Christ the Redeemer, Rio de Janiero')
 
+Booking.create(rent_price_cents: '9_000_000',
+               starts_on: Time.now,
+               ends_on: Time.now + 2,
+               user_id: 6,
+               armored_car_id: 6,
+               address: '26 Ladiera de Gloria, Rio de Janiero')
+
+Booking.create(rent_price_cents: '10_000',
+               starts_on: Time.now,
+               ends_on: Time.now + 2,
+               user_id: 2,
+               armored_car_id: 6,
+               address: 'Christ the Redeemer, Rio de Janiero')
+
+
 puts 'Seed complete'
