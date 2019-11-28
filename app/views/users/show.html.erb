@@ -18,6 +18,7 @@ starts on day: <%= booking.starts_on %><br>
 ends on day: <%= booking.ends_on %><br>
 Days of rent: <%= booking.days_of_rent %><br>
 the total amount to be paid is: <%= number_to_currency(booking.total_price / 100.0) %><br>
+<%= link_to 'cancel', armored_car_booking_path(booking),method: :delete, data: {confirm: 'are you sure' } %><br>
         <% end %>
     </div>
 </div>
