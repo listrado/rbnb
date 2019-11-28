@@ -44,6 +44,14 @@ Booking.create(rent_price_cents: '9_000',
                starts_on: Time.now,
                ends_on: Time.now + 1,
                user_id: 2,
-               armored_car_id: 5)
+               armored_car_id: 5,
+               address: '16 Villa Gaudelet, Paris')
+
+Booking.create(rent_price_cents: '9_000_000',
+               starts_on: Time.now,
+               ends_on: Time.now + 2,
+               user_id: 2,
+               armored_car_id: 6,
+               address: 'Christ the Redeemer, Rio de Janiero')
 
 puts 'Seed complete'
