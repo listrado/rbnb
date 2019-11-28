@@ -47,6 +47,6 @@ class ArmoredCarsController < ApplicationController
   private
 
   def car_params
-    params.require(:armored_car).permit(:model, :detailes, :price_cents)
+    params.require(:armored_car).permit(:model, :address, :detailes, :price_cents)
   end
 end
