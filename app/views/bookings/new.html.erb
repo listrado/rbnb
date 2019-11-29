@@ -1,7 +1,8 @@
 <!-- POST /armoredcars/1/bookings -->
 <div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h1>Booking an armored_car</h1>
+  <div class="banner-content text-center">
+    <p class="booking-title">Book an armored car</p>
+    <hr>
     <%= simple_form_for [@armored_car, @booking] do |form| %>
     <%= form.input :starts_on, as: :string, required: false, input_html: {class: "datepicker"} %>
     <%= form.input :ends_on, as: :string, required: false, input_html: {class: "datepicker"} %>
