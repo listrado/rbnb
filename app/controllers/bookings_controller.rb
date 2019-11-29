@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.geocoded #returns bookings with coordinates
+    # @bookings = Booking.geocoded #returns bookings with coordinates
+    @bookings = Booking.all
 
     @markers = @bookings.map do |booking|
       {
