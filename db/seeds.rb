@@ -24,6 +24,7 @@ ArmoredCar.create!(
   price_cents: 2_000,
   user: first_user,
   address: '16 Villa Gaudelet, Paris',
+  image: 'https://c7.alamy.com/compde/dc72d4/gepanzerte-deutschen-wagen-form-zweiter-weltkrieg-bekampfen-zug-dc72d4.jpg',
 ).update!(
   latitude: 48.8649224,
   longitude: 2.3800903
@@ -35,6 +36,7 @@ ArmoredCar.create!(
   price_cents: 1_000,
   user: first_user,
   address: '16 Villa Gaudelet, Paris',
+  image: 'https://c7.alamy.com/compde/dc72d4/gepanzerte-deutschen-wagen-form-zweiter-weltkrieg-bekampfen-zug-dc72d4.jpg',
 ).update!(
   latitude: 52.36054,
   longitude:  -3.71196
@@ -46,6 +48,7 @@ ArmoredCar.create!(
   price_cents: 2_000,
   user: first_user,
   address: 'Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ',
+  image: 'https://media.defense.gov/2018/May/14/2001916792/-1/-1/0/171129-M-OI329-0119.JPG',
 ).update!(
   latitude: -70.70676,
   longitude: 145.76581
@@ -57,6 +60,7 @@ ArmoredCar.create!(
   price_cents: 2_000,
   user: first_user,
   address: '11 Broadway, Financial District, New York, NY 10004, United States',
+  image: 'https://media.defense.gov/2018/May/14/2001916767/-1/-1/0/180218-Z-NU746-0140.JPG',
 ).update!(
   latitude: -22.9204468,
   longitude: -43.1827152

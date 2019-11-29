@@ -1,15 +1,15 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-6">
-      <h1>New ArmoredCar</h1>
-      <%= simple_form_for [@car] do |form| %>
-        <%= form.input :model %>
-        <%= form.input :detailes %>
-        <%= form.input :price_cents %>
-        <%= form.input :address %>
-        <%= form.button :submit, class: "btn-primary" %>
-      <% end %>
-      <%= link_to 'back', armored_cars_path %>
-    </div>
+  <div class="banner-content text-center">
+    <p class="booking-title">New armored car</p>
+    <hr>
+    <%= simple_form_for [@car] do |form| %>
+    <%= form.input :model %>
+    <%= form.input :detailes %>
+    <%= form.input :price_cents %>
+    <%= form.input :address %>
+    <%= form.input :image %>
+    <%= form.button :submit, class: "btn-primary" %>
+    <% end %>
+    <%= link_to 'back', armored_cars_path %>
   </div>
 </div>

@@ -5,6 +5,7 @@ class ArmoredCarsController < ApplicationController
   end
 
   def show
+    raise
     @car = ArmoredCar.find(params[:id])
   end
 
