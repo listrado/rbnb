@@ -71,8 +71,8 @@ Booking.create!(
   armored_car: ArmoredCar.fifth,
   address: 'Christ the Redeemer, Rio de Janeiro'
 ).update!(
-  lat: -22.9519173,
-  lon: -43.210495
+  latitude: -22.9519173,
+  longitude: -43.210495
 )
 
 Booking.create!(
@@ -81,7 +81,7 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: first_user,
   armored_car: ArmoredCar.fifth,
-  address: '26 Ladiera de Gloria, Rio de Janeiro'
+  address: '18 Rue Beautreillis, 75004 Paris, France - RJ'
 ).update!(
   latitude: 48.8649224,
   longitude: 2.3800903
@@ -93,10 +93,10 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: second_user,
   armored_car: ArmoredCar.fifth,
-  address: 'Christ the Redeemer, Rio de Janeiro'
+  address: 'Van Arteveldestraat 1, 1000 Brussels, Belgium'
 ).update!(
-  latitude: 48.8649224,
-  longitude: 2.3800903
+  latitude: -22.9204468,
+  longitude: -43.1827152
 )
 
 puts 'Seed complete'
