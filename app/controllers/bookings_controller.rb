@@ -2,8 +2,10 @@ class BookingsController < ApplicationController
   def index
     # @bookings = Booking.geocoded #returns bookings with coordinates
     @bookings = Booking.all
+    @car = ArmoredCar.find(params[:armored_car_id])
+    @selected_bookings = @bookings.select { |booking| booking.armored_car == @car }
 
-    @markers = @bookings.map do |booking|
+    @markers = @selected_bookings.map do |booking|
       {
         lat: booking.latitude,
         lng: booking.longitude,
