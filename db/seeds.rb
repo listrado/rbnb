@@ -107,4 +107,45 @@ Booking.create!(
   armored_car: ArmoredCar.fifth
 )
 
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.first
+)
+
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.second
+)
+
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.third
+)
+
+# Booking.create!(
+#   rent_price_cents: '10_000',
+#   starts_on: Time.now,
+#   ends_on: Time.now + 2,
+#   user: second_user,
+#   armored_car: ArmoredCar.sixth
+# )
+
+# Booking.create!(
+#   rent_price_cents: '10_000',
+#   starts_on: Time.now,
+#   ends_on: Time.now + 2,
+#   user: second_user,
+#   armored_car: ArmoredCar.seventh
+# )
+
+
 puts 'Seed complete'
