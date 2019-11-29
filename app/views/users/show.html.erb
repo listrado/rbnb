@@ -39,9 +39,9 @@
       		</div>
       	</div>
             <h1>My Cars</h1>
-          <% @own_cars.each do |own_cars|  %>
-          <%=own_cars.model  %>
-          <%=own_cars.detailes %> <br>
+          <% @own_cars.each do |car|  %>
+          <%=link_to car.model,armored_car_bookings_path(car)%>
+          <%=car.detailes%> <br>
           <% end %>
       </div>
     </div>
