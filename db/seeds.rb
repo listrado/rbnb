@@ -92,11 +92,11 @@ Booking.create!(
   starts_on: Time.now,
   ends_on: Time.now + 2,
   user: second_user,
-  armored_car: ArmoredCar.fifth,
+  armored_car: ArmoredCar.fifth
   address: '11 Broadway, Financial District, New York, NY 10004, United States'
 ).update!(
-  latitude: 48.8649224,
-  longitude: 2.3800903
+  latitude: -22.9204468,
+  longitude: -43.1827152
 )
 
 puts 'Seed complete'
