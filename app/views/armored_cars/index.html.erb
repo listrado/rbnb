@@ -6,7 +6,11 @@
     <div class="hold-card card card-cascade">
       <!-- Card image -->
       <div class="view view-cascade overlay">
-        <%= image_tag "ac1.jpg", class: "card-img-top" %>
+        <% if armored_car.image %>
+        <img class="card-img-top" src="<%= armored_car.image %>" alt="armored car">
+        <% else %>
+        <%= image_tag "ac1.jpeg", class: "card-img-top" %>
+        <% end %>
       </div>
 
       <!-- Card content -->
@@ -21,8 +25,8 @@
           <%= link_to armored_car.detailes, armored_car, class: "card-text" %>
         </p>
         <!-- Linkedin -->
-           <%= link_to armored_car, class: "px-2 fa-lg li-ic" do %>
-          choose <i class="fa fa-positive ml-2"></i>
+        <%= link_to armored_car, class: "px-2 fa-lg li-ic" do %>
+        choose <i class="fa fa-positive ml-2"></i>
         <% end %>
 
       </div>
