@@ -2,7 +2,7 @@ Booking.destroy_all
 ArmoredCar.destroy_all
 User.destroy_all
 
-puts 'Creating Users and ArmoredCars'
+puts 'Creating Users'
 
 first_user = User.create!(
   email: 'user1@gmail.com',
@@ -16,40 +16,64 @@ second_user = User.create!(
   name: 'Monster'
 )
 
+puts 'Creating ArmoredCars'
+
 ArmoredCar.create!(
   model: 'Tanque Argentino Mediano',
   detailes: 'medium tank',
   price_cents: 2_000,
-  user: first_user
+  user: first_user,
+  address: '16 Villa Gaudelet, Paris',
+).update!(
+  latitude: 48.8649224,
+  longitude: 2.3800903
 )
 
 ArmoredCar.create!(
   model: 'EE-3 Jararaca',
   detailes: ' Brazilian scout car ',
   price_cents: 1_000,
-  user: first_user
+  user: first_user,
+  address: '16 Villa Gaudelet, Paris',
+).update!(
+  latitude: 52.36054,
+  longitude:  -3.71196
 )
 
 ArmoredCar.create!(
   model: 'EE-9 Cascavel',
   detailes: ' a six-wheeled Brazilian armoured car developed primarily for reconnaissance',
   price_cents: 2_000,
-  user: first_user
+  user: first_user,
+  address: 'Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ',
+).update!(
+  latitude: -70.70676,
+  longitude: 145.76581
 )
 
 ArmoredCar.create!(
   model: 'VBTP-MR Guarani',
   detailes: 'Medium Wheeled Type',
   price_cents: 2_000,
-  user: first_user
+  user: first_user,
+  address: '11 Broadway, Financial District, New York, NY 10004, United States',
+).update!(
+  latitude: -22.9204468,
+  longitude: -43.1827152
 )
 
 ArmoredCar.create!(
   model: 'Batmobile',
   detailes: "Andre's favorite",
   price_cents: 9_000,
-  user: first_user
+  user: first_user,
+  address: 'Centro, Rio de Janeiro - State of Rio de Janeiro',
+).update!(
+  latitude: 36.35229,
+  longitude: -89.98083
 )
+
+puts 'Creating Bookings'
 
 Booking.create!(
   rent_price_cents: '9_000',
@@ -57,10 +81,6 @@ Booking.create!(
   ends_on: Time.now + 1,
   user: second_user,
   armored_car: ArmoredCar.fourth,
-  address: '16 Villa Gaudelet, Paris'
-).update!(
-  latitude: 48.8649224,
-  longitude: 2.3800903
 )
 
 Booking.create!(
@@ -69,10 +89,6 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: second_user,
   armored_car: ArmoredCar.fifth,
-  address: 'Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ'
-).update!(
-  latitude: -22.9519173,
-  longitude: -43.210495
 )
 
 Booking.create!(
@@ -81,10 +97,6 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: first_user,
   armored_car: ArmoredCar.fifth,
-  address: 'Centro, Rio de Janeiro - State of Rio de Janeiro'
-).update!(
-  latitude: 48.8649224,
-  longitude: 2.3800903
 )
 
 Booking.create!(
@@ -93,10 +105,47 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: second_user,
   armored_car: ArmoredCar.fifth
-  address: '11 Broadway, Financial District, New York, NY 10004, United States'
-).update!(
-  latitude: -22.9204468,
-  longitude: -43.1827152
 )
+
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.first
+)
+
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.second
+)
+
+Booking.create!(
+  rent_price_cents: '10_000',
+  starts_on: Time.now,
+  ends_on: Time.now + 2,
+  user: second_user,
+  armored_car: ArmoredCar.third
+)
+
+# Booking.create!(
+#   rent_price_cents: '10_000',
+#   starts_on: Time.now,
+#   ends_on: Time.now + 2,
+#   user: second_user,
+#   armored_car: ArmoredCar.sixth
+# )
+
+# Booking.create!(
+#   rent_price_cents: '10_000',
+#   starts_on: Time.now,
+#   ends_on: Time.now + 2,
+#   user: second_user,
+#   armored_car: ArmoredCar.seventh
+# )
+
 
 puts 'Seed complete'
