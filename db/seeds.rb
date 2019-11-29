@@ -69,10 +69,10 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: second_user,
   armored_car: ArmoredCar.fifth,
-  address: 'Christ the Redeemer, Rio de Janeiro'
+  address: 'Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ'
 ).update!(
-  lat: -22.9519173,
-  lon: -43.210495
+  latitude: -22.9519173,
+  longitude: -43.210495
 )
 
 Booking.create!(
@@ -81,7 +81,7 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: first_user,
   armored_car: ArmoredCar.fifth,
-  address: '26 Ladiera de Gloria, Rio de Janeiro'
+  address: 'Centro, Rio de Janeiro - State of Rio de Janeiro'
 ).update!(
   latitude: 48.8649224,
   longitude: 2.3800903
@@ -93,7 +93,7 @@ Booking.create!(
   ends_on: Time.now + 2,
   user: second_user,
   armored_car: ArmoredCar.fifth,
-  address: 'Christ the Redeemer, Rio de Janeiro'
+  address: '11 Broadway, Financial District, New York, NY 10004, United States'
 ).update!(
   latitude: 48.8649224,
   longitude: 2.3800903
