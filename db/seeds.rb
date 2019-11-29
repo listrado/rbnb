@@ -82,7 +82,7 @@ puts 'Creating Bookings'
 Booking.create!(
   rent_price_cents: '9_000',
   starts_on: Time.now,
-  ends_on: Time.now + 1,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.fourth,
 )
@@ -90,7 +90,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '9_000_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.fifth,
 )
@@ -98,7 +98,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '9_000_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: first_user,
   armored_car: ArmoredCar.fifth,
 )
@@ -106,7 +106,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '10_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.fifth
 )
@@ -114,7 +114,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '10_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.first
 )
@@ -122,7 +122,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '10_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.second
 )
@@ -130,7 +130,7 @@ Booking.create!(
 Booking.create!(
   rent_price_cents: '10_000',
   starts_on: Time.now,
-  ends_on: Time.now + 2,
+  ends_on: Time.now,
   user: second_user,
   armored_car: ArmoredCar.third
 )
