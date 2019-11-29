@@ -31,8 +31,7 @@
 		    </div>
 		    <div class="col-md-6">
 		    	<img
-		        	id="map"
-		        	src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%= "#{booking.longitude},#{booking.latitude}" %>,16.45,0,0/300x300?access_token=pk.eyJ1IjoibWF2ZXJpY2thbnAiLCJhIjoiY2sycWx1MDdvMGdkdjNoazRvb3d3NTlxaCJ9.3_qqAnqwuqoCNmnhQUm1_Q"
+		        	src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%= "#{booking.longitude},#{booking.latitude}" %>,16.45,0,0/300x300?access_token=<%= ENV['MAPBOX_API_KEY'] %>"
 		      	/><br>
 		    </div>
 		    <% end %>
