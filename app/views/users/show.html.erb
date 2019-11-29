@@ -38,6 +38,11 @@
       		    <% end %>
       		</div>
       	</div>
+            <h1>My Cars</h1>
+          <% @own_cars.each do |own_cars|  %>
+          <%=own_cars.model  %>
+          <%=own_cars.detailes %> <br>
+          <% end %>
       </div>
     </div>
   </div>
