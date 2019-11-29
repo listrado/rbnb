@@ -16,6 +16,7 @@ class ArmoredCarsController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @car = ArmoredCar.new(car_params)
+    @car.address = 'Christ Redeemer - Rio de Janeiro' unless @car.geocode
     @car.user = @user
     @car.save
 

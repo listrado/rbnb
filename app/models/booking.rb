@@ -1,7 +1,4 @@
 class Booking < ApplicationRecord
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
-
   belongs_to :user
   belongs_to :armored_car
   has_many   :reviews
@@ -12,5 +9,17 @@ class Booking < ApplicationRecord
 
   def total_price
     rent_price_cents * days_of_rent
+  end
+
+  def address
+    armored_car.address
+  end
+
+  def latitude
+    armored_car.latitude
+  end
+
+  def longitude
+    armored_car.longitude
   end
 end
