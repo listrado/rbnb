@@ -3,8 +3,8 @@
 <%= @car.inspect %>
 <%= simple_form_for [@car] do |form| %>
   <%= form.input :model %>
-  <%= form.input :detailes %>
-  <%= form.input :price_cents %>
+  <%= form.input :details %>
+  <%= form.input :price %>
   <%= form.button :submit, class: "btn-primary" %>
 <% end %>
 <%= link_to 'Back', armored_cars_path %>
