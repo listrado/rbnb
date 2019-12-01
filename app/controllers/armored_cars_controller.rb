@@ -5,7 +5,6 @@ class ArmoredCarsController < ApplicationController
   end
 
   def show
-    raise
     @car = ArmoredCar.find(params[:id])
   end
 
@@ -20,7 +19,6 @@ class ArmoredCarsController < ApplicationController
     @car.address = 'Christ Redeemer - Rio de Janeiro' unless @car.geocode
     @car.user = @user
     @car.save
-
     # redirect_to garden_path(@garden)
     redirect_to @car
   end
@@ -49,6 +47,6 @@ class ArmoredCarsController < ApplicationController
   private
 
   def car_params
-    params.require(:armored_car).permit(:model, :address, :detailes, :price_cents)
+    params.require(:armored_car).permit(:model, :address, :detailes, :price_cents, :image)
   end
 end
